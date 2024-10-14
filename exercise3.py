@@ -11,7 +11,7 @@ def parse_folder(path):
         for element in path.iterdir():
             if element.is_dir():
                 print(Fore.RED + f"Parse folder : This is folder - {element.name}")
-                # parse_folder(element) -> рекурсія
+                parse_folder(element)           #-> рекурсія
             if element.is_file():
                 print(Fore.GREEN + f"Parse folder : This is file - {element.name}")
     except Exception as e:
