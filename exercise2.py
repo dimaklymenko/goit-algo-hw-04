@@ -6,9 +6,8 @@ def get_cats_info(path):
          cats = [el.split(',') for el in fh.readlines()]
       cats_1 = []
       for el in cats:
-         el[2] = int(el[2])
-         cats_dict = {"id" : el[0], "name" : el[1], "age" : el[2]}
-         cats_1.append(cats_dict)  
+         cats_dict = {"id" : el[0], "name" : el[1], "age" : el[2].strip('\n')}
+         cats_1.append(cats_dict)    
       return cats_1
    except Exception as e:
       print(f"{e} with file")

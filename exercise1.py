@@ -6,7 +6,7 @@ def total_salary(path):
          some_list = [el.split(',') for el in fh.readlines()]        
       total = 0
       for el in some_list:
-         el[1] = int(el[1])
+         el[1] = float(el[1])
          total += el[1]
       average = total / len(some_list)
       salary_tuple = (total, average)
